@@ -3,6 +3,11 @@ from django.utils import timezone
 # Create your models here.
 
 class Category(models.Model):
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
+
     type = models.CharField(max_length=50)
     description = models.TextField(max_length=1000)
     date = models.DateTimeField(default=timezone.now)
